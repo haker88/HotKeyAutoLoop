@@ -121,9 +121,9 @@ namespace WindowsFormsApp1
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "2 Scenes",
-            "3 Scenes",
-            "4 Scenes"});
+            "2",
+            "3",
+            "4"});
             this.comboBox1.Location = new System.Drawing.Point(137, 210);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(216, 37);
@@ -188,6 +188,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 15;
             this.button2.Text = "Start auto switching";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

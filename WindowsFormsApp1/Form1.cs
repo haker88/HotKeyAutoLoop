@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
@@ -53,6 +54,25 @@ namespace WindowsFormsApp1
             else
             {
                 MessageBox.Show("only numbers are allowed");      }
+        }
+
+
+        public void switcher()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text);
+            int scenes = Convert.ToInt32(comboBox1.SelectedItem.ToString());
+
+            while (true)
+            {
+
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
