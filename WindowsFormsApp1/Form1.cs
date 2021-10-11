@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1.Go to Prism Settings\r\n2.Hotkeys - programm hotkeys for each scene: Ctrl + Alt + 1 for scene 1, Ctrl + Alt + 2 for scene 2 and so on.\r\n3.Select how many scenes you have in switching program.\r\n4.Click 'Start auto switching'");
+            MessageBox.Show("1.Go to Prism Settings\r\n2.Hotkeys - programm hotkeys for each scene: Shift + 1 for scene 1, Shift + 2 for scene 2 and so on.\r\n3.Select how many scenes you have in switching program.\r\n4.Click 'Start auto switching'");
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -62,17 +62,19 @@ namespace WindowsFormsApp1
 
         public void switcher()
         {
-            int seconds = Convert.ToInt32(textBox5.Text);
+            int seconds = Convert.ToInt32(textBox5.Text)*1000;
             int scenes = Convert.ToInt32(comboBox1.SelectedItem.ToString());
             InputSimulator sim = new InputSimulator();
             while (true)
             {
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
-                Thread.Sleep(2000);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
-                Thread.Sleep(2000);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
             }
 
         }
@@ -86,12 +88,17 @@ namespace WindowsFormsApp1
             {
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
                 Thread.Sleep(seconds);
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
                 Thread.Sleep(seconds);
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+
+
                 Thread.Sleep(seconds);
             }
 

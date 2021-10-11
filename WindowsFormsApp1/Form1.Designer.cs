@@ -81,7 +81,8 @@ namespace WindowsFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 35);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Ctrl + Alt + 1";
+            this.textBox1.Text = "Shift + 1";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -90,7 +91,8 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(147, 35);
             this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Ctrl + Alt + 2";
+            this.textBox2.Text = "Shift + 2";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
@@ -100,7 +102,8 @@ namespace WindowsFormsApp1
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(147, 35);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Ctrl + Alt + 3";
+            this.textBox3.Text = "Shift + 3";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
