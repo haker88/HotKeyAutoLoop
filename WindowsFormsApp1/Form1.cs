@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Runtime.InteropServices;
+using WindowsInput;
+using WindowsInput.Native;
 
 namespace WindowsFormsApp1
 {
@@ -16,7 +19,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-
+            InputSimulator sim = new InputSimulator();
             textBox5.Text = "60";
         }
 
@@ -30,9 +33,9 @@ namespace WindowsFormsApp1
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-            textBox4.Enabled = false;
             comboBox1.SelectedIndex =0;
             comboBox1.Refresh();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -61,18 +64,49 @@ namespace WindowsFormsApp1
         {
             int seconds = Convert.ToInt32(textBox5.Text);
             int scenes = Convert.ToInt32(comboBox1.SelectedItem.ToString());
-
+            InputSimulator sim = new InputSimulator();
             while (true)
             {
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                Thread.Sleep(2000);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                Thread.Sleep(2000);
+            }
 
+        }
 
+        public void switcher2()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text)*1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (true)
+            {
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                Thread.Sleep(seconds);
             }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            if(comboBox1.SelectedIndex==0)
+            {
+                switcher();
+            }
+            else
+            {
+                switcher2();
+            }
         }
     }
 }
