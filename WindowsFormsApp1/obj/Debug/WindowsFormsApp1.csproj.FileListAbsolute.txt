@@ -10,3 +10,4 @@ C:\Users\SparkStorms\Videos\Downloads\SceneSwitcher\WindowsFormsApp1\WindowsForm
 C:\Users\SparkStorms\Videos\Downloads\SceneSwitcher\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\SparkStorms\Videos\Downloads\SceneSwitcher\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\SparkStorms\Videos\Downloads\SceneSwitcher\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\SparkStorms\Videos\Downloads\SceneSwitcher\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache

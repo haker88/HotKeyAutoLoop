@@ -16,13 +16,17 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        public bool Run = false;
+
         public Form1()
         {
             InitializeComponent();
             InputSimulator sim = new InputSimulator();
             textBox5.Text = "60";
+            button3.Hide();
+            
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -34,12 +38,7 @@ namespace WindowsFormsApp1
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             comboBox1.SelectedIndex =0;
-            comboBox1.Refresh();
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+            comboBox1.Refresh();          
 
         }
 
@@ -63,11 +62,10 @@ namespace WindowsFormsApp1
         public void switcher()
         {
             int seconds = Convert.ToInt32(textBox5.Text)*1000;
-            int scenes = Convert.ToInt32(comboBox1.SelectedItem.ToString());
+           
             InputSimulator sim = new InputSimulator();
-            while (true)
-            {
-                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+            while (Run)
+            {  sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
                 sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
                 Thread.Sleep(seconds);
@@ -84,7 +82,259 @@ namespace WindowsFormsApp1
             int seconds = Convert.ToInt32(textBox5.Text)*1000;
 
             InputSimulator sim = new InputSimulator();
-            while (true)
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher3()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher4()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher5()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_6);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher6()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_6);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_7);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher7()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_6);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_7);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_8);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher8()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
+            {
+
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_2);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_6);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_7);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_8);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_9);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }
+
+        }
+
+        public void switcher9()
+        {
+            int seconds = Convert.ToInt32(textBox5.Text) * 1000;
+
+            InputSimulator sim = new InputSimulator();
+            while (Run)
             {
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_1);
@@ -97,23 +347,97 @@ namespace WindowsFormsApp1
                 sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
                 sim.Keyboard.KeyPress(VirtualKeyCode.VK_3);
                 sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
-
-
                 Thread.Sleep(seconds);
-            }
-
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_4);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_5);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_6);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_7);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_8);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_9);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+                sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_0);
+                sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                Thread.Sleep(seconds);
+            }            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex==0)
+            button3.Show();
+            Run = true;
+
+            switch (Convert.ToInt16(comboBox1.SelectedItem.ToString()))
             {
-                switcher();
+                case 2:
+                    var thread = new Thread(switcher);
+                    th2.Start();
+                    break;
+                case 3:
+                    Thread th2 = new Thread(switcher2);
+                    th2.Start();
+                    break;
+                case 4:
+                    Thread th3 = new Thread(switcher3);
+                    th3.Start();
+                    break;
+                case 5:
+                    Thread th4 = new Thread(switcher4);
+                    th4.Start();
+                    break;
+                case 6:
+                    Thread th5 = new Thread(switcher5);
+                    th5.Start();
+                    break;
+                case 7:
+                    Thread th6 = new Thread(switcher6);
+                    th6.Start();
+                    break;
+                case 8:
+                    Thread th7 = new Thread(switcher7);
+                    th7.Start();
+                    break;
+                case 9:
+                    Thread th8 = new Thread(switcher8);
+                    th8.Start();
+                    break;
+                case 10:
+                    Thread th9 = new Thread(switcher9);
+                    th9.Start();
+                    break;
+                default:
+                    // code block
+                    break;
             }
-            else
-            {
-                switcher2();
-            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string end = comboBox1.SelectedItem.ToString();
+            button2.Text = "Start auto switching: 1-" + end;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Run = false;
+            button3.Hide();
         }
     }
 }
